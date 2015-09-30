@@ -15,7 +15,7 @@ function add_post_featured_image_as_rss_item_enclosure() {
 	if ( ! has_post_thumbnail() )
 		return;
 
-	$thumbnail_size = apply_filters( 'rss_enclosure_image_size', 'thumbnail' );
+	$thumbnail_size = apply_filters( 'rss_enclosure_image_size', 'large' );
 	$thumbnail_id = get_post_thumbnail_id( get_the_ID() );
 	$thumbnail = image_get_intermediate_size( $thumbnail_id, $thumbnail_size );
 
